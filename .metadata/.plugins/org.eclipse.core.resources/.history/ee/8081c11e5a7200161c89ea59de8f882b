@@ -1,8 +1,0 @@
-
-public class Role extends Skill {
-
-	private Skill[] skills = {};
-	public FarmerRole() {
-	}
-
-}

@@ -1,9 +1,0 @@
-
-public class ItemNotFound extends Exception {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 6887928284095190653L;
-
-}

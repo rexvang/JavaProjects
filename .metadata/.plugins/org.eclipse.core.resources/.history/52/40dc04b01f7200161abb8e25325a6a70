@@ -1,9 +1,0 @@
-
-public class SecondaryPlayer extends Player {
-
-	public SecondaryPlayer(String name, int speed, int load, int health) {
-		super(name, speed, load, health);
-		// TODO Auto-generated constructor stub
-	}
-
-}

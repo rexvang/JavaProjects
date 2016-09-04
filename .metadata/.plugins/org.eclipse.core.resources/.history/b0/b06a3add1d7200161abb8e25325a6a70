@@ -1,8 +1,0 @@
-
-public class MainPlayer extends Player {
-
-	private name;
-	public MainPlayer() {
-	}
-
-}

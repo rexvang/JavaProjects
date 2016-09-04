@@ -1,7 +1,0 @@
-
-public class Player {
-	private String name;
-	private int speed;
-	private int load;
-	private int health;
-}
