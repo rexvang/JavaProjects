@@ -1,0 +1,16 @@
+
+public class Inventory {
+	private int maxLoad;
+
+	public Inventory(int load) {
+		setMaxLoad(load);
+	}
+
+	public int getMaxLoad() {
+		return maxLoad;
+	}
+	public void setMaxLoad(int maxLoad) {
+		this.maxLoad = maxLoad;
+	}
+
+}

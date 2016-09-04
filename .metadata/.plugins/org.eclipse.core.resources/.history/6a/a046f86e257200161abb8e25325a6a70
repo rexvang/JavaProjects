@@ -1,0 +1,53 @@
+
+public class Player {
+	private String name;
+	private int speed;
+	private int weight;
+	private int health;
+	private Inventory inventory;
+	
+	public Player(String name, int speed, int weight, int health) {
+		setName(name);
+		setSpeed(speed);
+		setWeight(weight);
+		setHealth(health);
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getSpeed() {
+		return speed;
+	}
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+	public int getWeight() {
+		return weight;
+	}
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+	public int getHealth() {
+		return health;
+	}
+	public void setHealth(int health) {
+		this.health = health;
+	}
+	
+	public void carry(String itemName, int quantity, int weight) {
+		
+	}
+	
+	public void drop(String itemName, int quantity) {
+		
+	}
+	public Inventory getInventory() {
+		return inventory;
+	}
+	public void setInventory(int weight) {
+		this.inventory = new Inventory(weight);
+	}
+}

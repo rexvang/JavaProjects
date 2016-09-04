@@ -1,0 +1,27 @@
+
+public class MainPlayer extends Player {
+
+	public MainPlayer(String name, int speed, int load, int health) {
+		super(name, speed, load, health);
+	}
+	
+	public void hunt() {
+		
+	}
+	
+	public void fish() {
+		
+	}
+	
+	public void scout() {
+		
+	}
+	
+	public void trade() {
+		
+	}
+	
+	public void carry() {
+		
+	}
+}

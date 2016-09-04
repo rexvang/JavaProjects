@@ -1,0 +1,8 @@
+
+public class MainPlayer extends Player {
+
+	public MainPlayer() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

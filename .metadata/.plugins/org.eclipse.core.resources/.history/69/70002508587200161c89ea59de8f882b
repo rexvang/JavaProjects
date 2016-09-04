@@ -1,0 +1,114 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class Inventory {
+	private int maxLoad;
+	private Map<Item,Integer> inventory;
+
+	public Inventory(int carryWeight) {
+		setMaxLoad(carryWeight);
+		setMapInventory();
+	}
+
+	public int getMaxLoad() {
+		return maxLoad;
+	}
+	public void setMaxLoad(int maxLoad) {
+		this.maxLoad = maxLoad;
+	}
+
+	public Map<Item,Integer> getMapInventory() {
+		return inventory;
+	}
+
+	public void setMapInventory() {
+		this.inventory = new HashMap<Item,Integer>();
+	}
+	
+	public int addItem(Item item, int quantity) {
+		int weightToBeAdded = item.getWeight() * quantity;
+		if((getWeight() + weightToBeAdded) <= maxLoad) {
+			if(inventory.containsKey(item)) {
+				// add more to existing item
+				System.out.println(item.getName() + " already exists... adding on");
+				inventory.replace(item, inventory.get(item)+quantity);
+			} else {
+				inventory.put(item, quantity);
+			}
+			return 0;
+		} else {
+			return -1;
+		}
+	}
+	
+	/**
+	 * Removes quantity specified of Item object from the inventory if 
+	 * quantity is less than current quantity in inventory. Otherwise
+	 * removes entire Item object from inventory.
+	 * 
+	 * @param item The Item object that you want to manipulate
+	 * @param quantity The quantity you want to remove
+	 */
+	public void removeItem(Item item, int quantity) {
+		if(item != null) {
+			if(quantity >= inventory.get(item)) {
+				inventory.remove(item);
+			} else {
+				inventory.replace(item, inventory.get(item)-quantity);
+			}
+		}
+	}
+	
+	public int getWeight() {
+		int weight = 0;
+		Item item = null;
+		Set<Item> items = inventory.keySet();
+		Iterator<Item> itr = items.iterator();
+		while(itr.hasNext()) {
+			item = itr.next();
+			weight += item.getWeight() * inventory.get(item);
+		}
+		return weight;
+	}
+	
+	/**
+	 * Get Item object from inventory by item name.
+	 * @param itemName The name of the Item object.
+	 * @return The Item object or null if not found.
+	 * @throws Exception 
+	 */
+	public Item getItem(String itemName) throws Exception {
+		Set<Item> items = inventory.keySet();
+		Item item = null;
+		boolean found = false;
+		Iterator<Item> itr = items.iterator();
+		while(itr.hasNext() && !found) {
+			 item = itr.next();
+			 if(item.getName().equals(itemName)) {
+				 found = true;
+			 }
+		}
+		if(!found) {
+			throw new Exception("Item was not found in inventory");
+		}
+		return item;
+	}
+	
+	public int getQuantity(String itemName) {
+		int quantity = 0;
+		
+		Item item;
+		try {
+			item = getItem(itemName);
+			if(item != null) {
+				quantity = inventory.get(item);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return quantity;
+	}
+}

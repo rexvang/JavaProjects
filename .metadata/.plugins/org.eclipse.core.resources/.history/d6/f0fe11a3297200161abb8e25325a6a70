@@ -1,0 +1,11 @@
+import java.util.Date;
+
+public class HmongTrail {
+
+	private Date startDate;
+	
+	
+	public HmongTrail() {
+	}
+
+}

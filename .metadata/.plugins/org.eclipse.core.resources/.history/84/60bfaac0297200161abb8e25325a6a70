@@ -1,0 +1,26 @@
+import java.util.Date;
+
+public class HmongTrail {
+
+	private Date startDate;
+	
+	
+	public HmongTrail() {
+	}
+
+
+	/**
+	 * @return the startDate
+	 */
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	/**
+	 * @param startDate the startDate to set
+	 */
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
+}

@@ -1,0 +1,12 @@
+
+public class ItemNotFound extends Exception {
+
+	public ItemNotFound() {
+		
+	}
+	
+	public void ItemNotFoundException(String message) {
+		super(message);
+	}
+
+}

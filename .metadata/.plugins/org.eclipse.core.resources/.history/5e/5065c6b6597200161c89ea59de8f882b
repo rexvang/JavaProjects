@@ -1,0 +1,8 @@
+
+public class FarmerRole extends Skill {
+
+	public FarmerRole() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

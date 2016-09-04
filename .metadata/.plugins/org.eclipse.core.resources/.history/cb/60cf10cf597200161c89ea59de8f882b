@@ -1,0 +1,7 @@
+
+public class FarmerRole extends Skill {
+
+	public FarmerRole() {
+	}
+
+}
