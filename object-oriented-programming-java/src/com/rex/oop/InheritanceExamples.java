@@ -3,7 +3,7 @@ package com.rex.oop;
 abstract class Animal {
 	String name;
 	
-	abstract String noise();
+	abstract String makeNoise();
 }
 
 class Dog extends Animal{
