@@ -3,13 +3,13 @@ package com.rex.oop;
 abstract class Animal {
 	String name;
 	
-	abstract String bark();
+	abstract String noise();
 }
 
 class Dog extends Animal{
 
 	@Override
-	String bark() {
+	String makeNoise() {
 		return "Ruff";
 	}
 	
@@ -18,7 +18,7 @@ class Dog extends Animal{
 class Cat extends Animal {
 
 	@Override
-	String bark() {
+	String makeNoise() {
 		return "Meow";
 	}
 }
@@ -33,8 +33,8 @@ public class InheritanceExamples {
 		
 		// polymorphism
 		Animal animal = new Cat();
-		System.out.println(animal.bark());
+		System.out.println(animal.makeNoise());
 		animal = new Dog();
-		System.out.println(animal.bark());
+		System.out.println(animal.makeNoise());
 	}
 }
